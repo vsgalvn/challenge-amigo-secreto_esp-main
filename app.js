@@ -1,24 +1,24 @@
-let participants = [];
+let amigos = [];
 
-        function addParticipant() {
-            const participantInput = document.getElementById('participant');
-            const participantName = participantInput.value.trim();
-            if (participantName && !participants.includes(participantName)) {
-                participants.push(participantName);
-                updateParticipantsList();
-                participantInput.value = '';
+        function agregarAmigo() {
+            const amigoInput = document.getElementById('amigo');
+            const amigoNombre = amigoInput.value.trim();
+            if (amigoNombre && !amigos.includes(amigoNombre)) {
+                amigos.push(amigoNombre);
+                actualizaAmigoslista();
+                amigoInput.value = '';
             } else {
                 alert('Nombre inválido o ya añadido');
             }
         }
 
-        function updateParticipantsList() {
-            const participantsList = document.getElementById('participantsList');
-            participantsList.innerHTML = '';
-            participants.forEach(participant => {
+        function actualizaAmigoslista() {
+            const amigosLista = document.getElementById('amigosLista');
+            amigosLista.innerHTML = '';
+            amigos.forEach(amigo => {
                 const li = document.createElement('li');
-                li.textContent = participant;
-                participantsList.appendChild(li);
+                li.textContent = amigo;
+                amigosLista.appendChild(li);
             });
         }
 
