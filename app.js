@@ -50,6 +50,7 @@ function sortearAmigo(){
     const resultadoUl = document.getElementById("resultado");
     
     resultadoUl.innerHTML = <li>${amigoSorteado}</li>;
+
     
 
 }
