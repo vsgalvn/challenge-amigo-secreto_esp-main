@@ -36,4 +36,11 @@ function actualizarLista(){
     });
 }
 
+function sortearAmigo(){
+
+    if (amigos.length === 0) {
+        alert("¡Cero amigos para sortear!, inserte un nombre.")
+    }
+}
+
 
