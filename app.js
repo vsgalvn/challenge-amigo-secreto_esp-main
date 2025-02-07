@@ -30,10 +30,10 @@ let amigos = [];
 
             const winnerIndex = Math.floor(Math.random() * amigos.length);
             const winner = amigos[winnerIndex];
-            displayWinner(winner);
+            sortearAmigo(winner);
         }
 
-        function displayWinner(winner) {
+        function sortearAmigo(winner) {
             const winnerElement = document.getElementById('winner');
             winnerElement.textContent = `El ganador del Amigo Secreto es: ${winner}`;
         }
