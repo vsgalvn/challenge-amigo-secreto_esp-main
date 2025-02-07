@@ -5,14 +5,14 @@ let amigos = [];
             const amigoNombre = amigoInput.value.trim();
             if (amigoNombre && !amigos.includes(amigoNombre)) {
                 amigos.push(amigoNombre);
-                actualizaAmigoslista();
+                actualizaAmigosLista();
                 amigoInput.value = '';
             } else {
                 alert('Nombre inválido o ya añadido');
             }
         }
 
-        function actualizaAmigoslista() {
+        function actualizaAmigosLista() {
             const amigosLista = document.getElementById('amigosLista');
             amigosLista.innerHTML = '';
             amigos.forEach(amigo => {
@@ -23,13 +23,13 @@ let amigos = [];
         }
 
         function amigoSecreto() {
-            if (participants.length < 2) {
-                alert('Se necesitan al menos 2 participantes para el sorteo');
+            if (amigos.length < 2) {
+                alert('Se necesitan al menos 2 nombres para el sorteo!');
                 return;
             }
 
-            const winnerIndex = Math.floor(Math.random() * participants.length);
-            const winner = participants[winnerIndex];
+            const winnerIndex = Math.floor(Math.random() * amigos.length);
+            const winner = amigos[winnerIndex];
             displayWinner(winner);
         }
 
