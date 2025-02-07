@@ -39,3 +39,9 @@ let amigos = [];
         }
 
 
+        document.addEventListener(`DOMContentloaded`, () =>{
+            document.getElementById("btnAdicionar").addEventListener("click", agregarAmigo);
+            document.getElementById("btnSortear").addEventListener("click", sortearAmigo); 
+
+        })
+
