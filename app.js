@@ -7,6 +7,7 @@ let amigos = [];
                 amigos.push(amigoNombre);
                 actualizaAmigosLista();
                 amigoInput.value = '';
+                amigoInput.focus();
             } else {
                 alert('Nombre inválido o ya añadido');
             }
@@ -22,26 +23,26 @@ let amigos = [];
             });
         }
 
-        function amigoSecreto() {
+        function sortearAmigo() {
             if (amigos.length < 2) {
                 alert('Se necesitan al menos 2 nombres para el sorteo!');
                 return;
             }
 
-            const winnerIndex = Math.floor(Math.random() * amigos.length);
-            const winner = amigos[winnerIndex];
-            sortearAmigo(winner);
-        }
+            const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+            const amigoSorteado = amigos[indiceAleatorio];
+            
+            const resultadoUl = document.getElementById("resultado");
 
-        function sortearAmigo() {
-            const winnerElement = document.getElementById('winner');
-            winnerElement.textContent = `El ganador del Amigo Secreto es: ${winner}`;
+            resultadoUl.innerHTML = `El ganador del Amigo Secreto es: ${amigoSorteado}`;
+
+        
         }
 
 
         document.addEventListener(`DOMContentloaded`, () =>{
-            document.getElementById("btnAdicionar").addEventListener("click", agregarAmigo);
-            document.getElementById("btnSortear").addEventListener("click", sortearAmigo); 
+            document.getElementById("button-add").addEventListener("click", agregarAmigo);
+            document.getElementById("button-draw").addEventListener("click", sortearAmigo);
 
         })
 
