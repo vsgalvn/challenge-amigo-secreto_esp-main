@@ -33,7 +33,7 @@ let amigos = [];
             sortearAmigo(winner);
         }
 
-        function sortearAmigo(winner) {
+        function sortearAmigo() {
             const winnerElement = document.getElementById('winner');
             winnerElement.textContent = `El ganador del Amigo Secreto es: ${winner}`;
         }
