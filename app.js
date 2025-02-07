@@ -39,8 +39,17 @@ function actualizarLista(){
 function sortearAmigo(){
 
     if (amigos.length === 0) {
-        alert("¡Cero amigos para sortear!, inserte un nombre.")
+        alert("¡Cero amigos para sortear!, inserte un nombre.");
+        return
     }
+    
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    const amigoSorteado = amigos[indiceAleatorio];
+
+    const resultadoUl = document.getElementById("resultado");
+
+    
 }
 
 
