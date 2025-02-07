@@ -18,7 +18,7 @@ Sigue estos pasos para empezar a trabajar:
     cd challenge-amigo-secreto_esp-main
     ```
 
-3. Abrí el archivo `index.html` en el web browser de preferencia para empezar a usar la aplicación.
+3. Abrí el archivo `index.html` en el web browser de tu preferencia para empezar a usar la aplicación.
 
 ## Ejecución local 🔥
 
